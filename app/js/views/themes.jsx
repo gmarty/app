@@ -1,6 +1,7 @@
 /* global React */
 
 import NavigationMenu from 'js/views/navigation-menu';
+import ThemesListItem from 'js/views/themes-list-item';
 
 export default class Themes extends React.Component {
   constructor(props) {
@@ -14,36 +15,7 @@ export default class Themes extends React.Component {
   }
 
   componentDidMount() {
-    this.foxbox.getRecipes()
-      .then(themes => {
-        this.setState({ themes });
-      })
-      .catch(console.error.bind(console));
-  }
-
-  /**
-   * Activate or deactivate a recipe.
-   *
-   * @param {number} id
-   * @param {SyntheticEvent} evt
-   */
-  handleOnChange(id, evt) {
-    const value = evt.target.checked;
-
-    this.foxbox.toggleRecipe(id, value)
-      .then(themes => {
-        this.setState({ themes });
-      })
-      .catch(console.error.bind(console));
-  }
-
-  /**
-   * Delete a recipe.
-   *
-   * @param {number} id
-   */
-  handleOnDelete(id) {
-    this.foxbox.removeRecipe(id)
+    this.foxbox.recipes.getAll()
       .then(themes => {
         this.setState({ themes });
       })
@@ -51,24 +23,9 @@ export default class Themes extends React.Component {
   }
 
   render() {
-    const themeItems = this.state.themes.map((theme, id) => {
-      let itemClassName = 'themes-list__item';
-      if (!theme.enabled) {
-        itemClassName += ' themes-list__item--deactivated';
-      }
-
-      return (
-        <li key={id}
-            className={itemClassName}>
-          <input className="themes-list__toggle" type="checkbox"
-                 checked={theme.enabled}
-                 onChange={this.handleOnChange.bind(this, id)}/>
-          <span className="themes-list__name">{theme.name}</span>
-          <button className="themes-list__remove"
-                  onClick={this.handleOnDelete.bind(this, id)}></button>
-        </li>
-      );
-    });
+    const themeItems = this.state.themes.map(theme => (
+      <ThemesListItem key={theme.id} theme={theme} foxbox={this.foxbox}/>
+    ));
 
     return (
       <div className="app-view">

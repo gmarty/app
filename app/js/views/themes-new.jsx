@@ -133,7 +133,7 @@ export default class ThemesNew extends React.Component {
     const actionService = selects[2].options[selects[2].selectedIndex].label;
     const actionProperty = selects[3].options[selects[3].selectedIndex].label;
 
-    this.foxbox.addRecipe({
+    this.foxbox.recipes.add({
         name: `When a ${service} ${property}, ${actionService} ${actionProperty}.`,
         conditionServiceId: this.state.service,
         conditionProp: this.state.property,
