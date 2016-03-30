@@ -44,7 +44,7 @@ export default class Recipe {
           .then(servicesEnabled => recipes.map((recipe, id) => ({
             id: recipe.id,
             name: recipe.id,
-            enabled: servicesEnabled[id][`${recipe.id}/get_enabled`] === 'On'
+            enabled: servicesEnabled[id][`${recipe.id}/get_enabled`].OnOff === 'On'
           })))
           .then(services => {
             console.log(services);

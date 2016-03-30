@@ -5,7 +5,7 @@ export default class ThemesListItem extends React.Component {
     super(props);
 
     this.state = {
-      enabled: props.enabled
+      enabled: props.theme.enabled
     };
 
     this.foxbox = props.foxbox;
@@ -42,14 +42,14 @@ export default class ThemesListItem extends React.Component {
 
   render() {
     let className = 'themes-list__item';
-    if (!this.props.theme.enabled) {
+    if (!this.state.enabled) {
       className += ' themes-list__item--deactivated';
     }
 
     return (
       <li className={className}>
         <input className="themes-list__toggle" type="checkbox"
-               checked={this.props.theme.enabled}
+               checked={this.state.enabled}
                onChange={this.handleOnChange.bind(this, this.props.theme.id)}/>
         <span className="themes-list__name">{this.props.theme.name}</span>
         <button className="themes-list__remove"
