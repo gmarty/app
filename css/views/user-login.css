@@ -1,0 +1,35 @@
+.user-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-login__logo {
+  width: 50%;
+  margin: 0 auto;
+  min-height: 0;
+}
+
+.user-login__login-button {
+  margin: 0 1rem;
+  min-height: 5rem;
+
+  color: white;
+  background: #0ca8a4;
+  border: none;
+}
+
+.user-login__login-button:disabled {
+  background: #c1d9d8;
+}
+
+.user-login__box-selector {
+  margin: 1rem;
+  padding: 1rem;
+
+  border: .2rem solid #0ca8a4;
+  border-radius: .2rem;
+  font-size: 2rem;
+  background: #0ca8a4;
+  color: white;
+}

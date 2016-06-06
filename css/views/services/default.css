@@ -1,0 +1,9 @@
+.default-service__body {
+  box-sizing: border-box;
+  padding: 2rem;
+  text-align: center;
+}
+
+.default-service__notice {
+  margin: 0;
+}

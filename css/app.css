@@ -1,0 +1,108 @@
+/** General styles **/
+html {
+  height: 100%;
+
+  font: normal 10px/10px Arial;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  background: #fff;
+  font: normal 2.2rem/4.4rem "Fira Sans", Arial;
+  font-weight: 300;
+}
+
+h1, h2 {
+  margin: 0;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 3.2rem;
+  width: 100%;
+}
+
+h2 {
+  font-size: 2.6rem;
+  padding: 1rem 3rem 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+input {
+  font: normal 2.2rem/4.4rem "Fira Sans", Arial;
+  font-weight: 300;
+  background: #fff;
+  margin: 0;
+  border: 1px solid grey;
+  border-radius: .3rem;
+}
+
+button {
+  font: normal 2.2rem/4.4rem "Fira Sans", Arial;
+  font-weight: 300;
+  background: #fff;
+  margin: 0;
+  border: 1px solid grey;
+  border-radius: .3rem;
+}
+
+select {
+  font: normal 2.2rem/4.4rem "Fira Sans", Arial;
+  font-weight: 300;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/** App specific styles */
+.app-view-container {
+  height: 100%;
+}
+
+.app-view {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+}
+
+.app-view__header {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  padding: 1rem 3rem;
+
+  background-color: #0ca8a4;
+  color: #fff;
+}
+
+.app-view__header--white {
+  background-color: #fff;
+  color: #0ca8a4;
+  text-align: center;
+  border-bottom: 1px solid #0ca8a4;
+}
+
+.app-view__body {
+  flex: 1;
+  position: relative;
+
+  overflow-y: auto;
+}
+
+.app-view__fill-body {
+  height: 100%;
+}
+
+.app-view__footer {
+  flex: 0 0 auto;
+}

@@ -1,0 +1,50 @@
+/* Footer menu */
+.navigation-menu {
+  display: flex;
+
+  width: 100%;
+  height: 5.6rem;
+  background-color: #08788a;
+}
+
+.navigation-menu__item {
+  flex-grow: 1;
+
+  text-align: center;
+  filter: brightness(5);
+  -webkit-filter: brightness(5);
+  border-bottom: .3rem solid transparent;
+}
+
+.navigation-menu__item-link {
+  display: block;
+
+  height: 4.75rem;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0;
+  background: url(../menu-icons/settings.svg) center 1.6rem no-repeat;
+  background-size: 2.4rem;
+}
+
+.navigation-menu__item--active {
+  filter: initial;
+  -webkit-filter: initial;
+  border-bottom-color: #3fd4f2;
+}
+
+.navigation-menu__item-link[href~="#services"] {
+  background-image: url(../menu-icons/home.svg);
+}
+
+.navigation-menu__item-link[href~="#themes"] {
+  background-image: url(../menu-icons/themes.svg);
+}
+
+.navigation-menu__item-link[href~="#mr-fox"] {
+  background-image: url(../menu-icons/notifications.svg);
+}
+
+.navigation-menu__item-link[href~="#settings"] {
+  background-image: url(../menu-icons/settings.svg);
+}
