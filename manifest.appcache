@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# version Fri Jun 10 2016 14:44:18 GMT+0100 (BST)
+# version Fri Jun 10 2016 16:32:34 GMT+0100 (BST)
 CACHE:
 browserconfig.xml
 favicon.ico
@@ -8,16 +8,12 @@ index.html
 manifest.webapp
 manifest.webmanifest
 css/app.css
-css/app.css.map
 img/icon-ios.svg
 img/icon-windows.svg
 img/icon.svg
 js/alameda.js
-js/alameda.js.map
 js/app.js
-js/app.js.map
 js/bootstrap.js
-js/bootstrap.js.map
 css/FiraSans/FiraSans-Bold.woff
 css/FiraSans/FiraSans-BoldItalic.woff
 css/FiraSans/FiraSans-Italic.woff
@@ -66,7 +62,6 @@ img/static-icons/safari-pinned-tab.svg
 js/components/react-dom.js
 js/components/react.js
 js/polyfills/fetch.js
-js/polyfills/fetch.js.map
 js/polyfills/url-search-params.js
 css/vendors/philips-hue/aura.svg
 css/vendors/philips-hue/beyond_ceiling_pendant_table.svg
